@@ -54,3 +54,14 @@ $("선택자:first-child") 선택자 자식 중 첫번째란 뜻이 아니라 �
      $('input[type="button"]:last').click(function(){
           $("span").css("color","white").css("font-size","1.8em");
      })
+     
+3. trigger
+---
+
+1] trigger 설정 trigger('함수명')
+
+     $('button').click(function(){
+          console.log($(this).html()+'을 클릭했어요');
+     })
+     
+     $('button').trigger('click');

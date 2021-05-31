@@ -1,6 +1,6 @@
 # JQuery
 
-1. Selector1
+1. Selector
 ---
 
 1] DOM객체 수 얻기 $('태그명').length
@@ -27,3 +27,30 @@
 $("선택자:first-child") 선택자 자식 중 첫번째란 뜻이 아니라 첫번째 자식들 중 선택자 란 뜻,, 아주 헷갈린다
           
                
+2. Get
+---
+
+1] 쟈바스크립트, JQuery DOM 객체 얻는 법
+
+     var jQueryDom = $('#naver')
+     var jsDom = document.getElementById('naver')
+     
+2] jQuery에서 쟈스 문법 사용하려면 Get()사용
+
+     jQuery.html("네이버")
+     js.innerHtml("네이버")
+     
+
+
+     jQuery.get(0).innerHtml("네이버")
+     
+3] value 값 설정
+     
+     $('input[type="button"]:first').click(function(){
+          console.log($('#txt').get(0).value);
+          console.log($('#txt').val());
+     })
+     
+     $('input[type="button"]:last').click(function(){
+          $("span").css("color","white").css("font-size","1.8em");
+     })

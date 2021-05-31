@@ -65,3 +65,17 @@ $("선택자:first-child") 선택자 자식 중 첫번째란 뜻이 아니라 �
      })
      
      $('button').trigger('click');
+     
+4. bind
+---
+두 개 이상의 함수를 사용하기 위해 사용된다.
+
+1] mouseover, mouseout함수 함께 쓰기
+     
+      $('div:eq(1) > div').bind('mouseover',function(){
+          $(this).css({"background-color":"black","color":"white"})
+      }).bind('mouseout',function(){
+          $(this).css({"background-color":"white","color":"black"})
+      })
+
+

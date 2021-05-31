@@ -92,7 +92,7 @@ $("선택자:first-child") 선택자 자식 중 첫번째란 뜻이 아니라 �
      
 2] unbind
 
-	$(function() {
+     $(function() {
           $('div:last h2').bind('click',function(){
                console.log($(this).html());
           })
@@ -101,3 +101,63 @@ $("선택자:first-child") 선택자 자식 중 첫번째란 뜻이 아니라 �
                $('div:last h2').unbind('click');
           })
      });
+     
+5. filter (migrate해야한다.)
+---
+
+     $(function() {
+          $('a').addClass('bg')
+	  .filter("[href*=naver]") //a태그 안에서 필터해준다
+	  .addClass('border')
+	  .end   		//다시 a태그로
+	  .filter(:eq(2))
+	  .removeClass('bg')
+     });
+     
+6. on/off
+---
+
+1]. 동적으로 추가한 요소에 이벤트 바인딩  $(document).on("이벤트","선택자",콜백함수) // $(document).off("이벤트","선택자")
+     
+     $(function() {
+		$(document).on("click","div",function(){
+			$(this).after("<div>동적으로 추가한 div</div>")
+		})
+		
+		//on으로 바인딩한 이벤트는 off로 이벤트 해제
+		$('button').click(function(){
+			$(document).off('click','div');
+		})
+	});
+	
+7. Toggle
+---
+
+1] 기본형
+	
+     $(function() {
+     	$('button').click(function(){
+		$('#div').toggle();
+	})
+     });
+
+
+2] 애니메이션주기
+
+     $(function() {
+	$('button').click(function(){
+		$('#div').toggle(3000,function(){
+			button.html(button.html()=='보이기'?'안보이기'?'보이기')
+		})
+	})
+     });
+
+3] 토글 클래스 주기
+
+     $(function() {
+     	$('button').click(function(){
+		$('div').toggleClass('invisible');
+	})
+     });
+
+	

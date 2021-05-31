@@ -160,4 +160,28 @@ $("선택자:first-child") 선택자 자식 중 첫번째란 뜻이 아니라 �
 	})
      });
 
+8. hover
+---
+
+     $(function() {
+     	$('tr:gt(0)').hover(function(){
+		$(this).addClass('bg');
+	},function(){
+		$(this).removeClass('bg');
+	})
+     });
+
+	//문]
 	
+     var width = parseInt($('img').get(0).style.width);
+     var height = parseInt($('img').get(0).style.height);
+
+     $(function() {
+     	$('img').hover(function(){
+		this.style.width = width*2 +'px'
+		this.style.height = height*2 +'px'
+	},function(){
+		this.style.width=width + 'px';
+		this.style.height=height + 'px';
+	})
+     });

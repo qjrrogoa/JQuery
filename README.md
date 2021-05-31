@@ -32,50 +32,72 @@ $("선택자:first-child") 선택자 자식 중 첫번째란 뜻이 아니라 �
 
 1] 쟈바스크립트, JQuery DOM 객체 얻는 법
 
-     var jQueryDom = $('#naver')
-     var jsDom = document.getElementById('naver')
+     $(function() {
+          var jQueryDom = $('#naver')
+          var jsDom = document.getElementById('naver')
+     });
+
      
 2] jQuery에서 쟈스 문법 사용하려면 Get()사용
 
-     jQuery.html("네이버")
-     js.innerHtml("네이버")
-     
+     $(function() {
+          jQuery.html("네이버")
+          js.innerHtml("네이버")
 
+          jQuery.get(0).innerHtml("네이버")
+     });
 
-     jQuery.get(0).innerHtml("네이버")
      
 3] value 값 설정
-     
-     $('input[type="button"]:first').click(function(){
-          console.log($('#txt').get(0).value);
-          console.log($('#txt').val());
-     })
-     
-     $('input[type="button"]:last').click(function(){
-          $("span").css("color","white").css("font-size","1.8em");
-     })
-     
+
+     $(function() {
+          $('input[type="button"]:first').click(function(){
+               console.log($('#txt').get(0).value);
+               console.log($('#txt').val());
+          })
+
+          $('input[type="button"]:last').click(function(){
+               $("span").css("color","white").css("font-size","1.8em");
+          })
+     });
+
+
 3. trigger
 ---
 
 1] trigger 설정 trigger('함수명')
 
-     $('button').click(function(){
-          console.log($(this).html()+'을 클릭했어요');
-     })
-     
-     $('button').trigger('click');
-     
+     $(function() {
+          $('button').click(function(){
+               console.log($(this).html()+'을 클릭했어요');
+          })
+
+          $('button').trigger('click');
+     });
+
+
 4. bind
 ---
 두 개 이상의 함수를 사용하기 위해 사용된다.
 
 1] mouseover, mouseout함수 함께 쓰기
      
-      $('div:eq(1) > div').bind('mouseover',function(){
-          $(this).css({"background-color":"black","color":"white"})
-      }).bind('mouseout',function(){
-          $(this).css({"background-color":"white","color":"black"})
-      })
+     $(function() {
+          $('div:eq(1) > div').bind('mouseover',function(){
+               $(this).css({"background-color":"black","color":"white"})
+          }).bind('mouseout',function(){
+               $(this).css({"background-color":"white","color":"black"})
+          })
+     });
+     
+2] unbind
 
+	$(function() {
+          $('div:last h2').bind('click',function(){
+               console.log($(this).html());
+          })
 
+          $('input[value="이벤트해제"]').click(function(){
+               $('div:last h2').unbind('click');
+          })
+     });

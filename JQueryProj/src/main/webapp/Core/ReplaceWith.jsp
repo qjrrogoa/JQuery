@@ -5,7 +5,16 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>One.jsp</title>
+<title>ReplaceWith.jsp</title>
+<style>
+	div{
+		width:50px;
+		height:50px;
+		border:1px red solid;
+		text-align: center;
+		line-height: 50px;
+	}
+</style>
 <!-- jQuery사용을 위한 라이브러리 임베딩-->
 <!-- 1]다운받은  .js파일 임베디드 -->
 <!--  
@@ -15,23 +24,28 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
 $(function(){
-	
-	$('button:first').one('click',function(){
-		console.log('딱 한번만 실행');
-	});
-	
-	$('button:last').on('click',function(){
-		console.log('클릭할때 마다 실행');
-	});
-	
+	$(':button').click(function(){
+		if($('div').length!=0){
+			$('div').each(function(){
+				$(this).replaceWith("<button>"+$(this).html()+"</button>");
+			})
+		}
+		else{
+			$('button').not(':button:last').each(function(){
+				$(this).replaceWith("<div>"+$(this).html()+"</div>");
+			})
+		}
+	})
 });
 </script>
 </head>
 <body>
 	<fieldset>
-		<legend>one('이벤트명',콜백함수)</legend>
-		<button>한번만 실행</button>
-		<button>여러번 실행</button>
+		<legend>replaceWith()함수</legend>
+		<div>div1</div>
+		<div>div2</div>
+		<div>div3</div>
+		<button>확인</button>
 	</fieldset>
 
 </body>

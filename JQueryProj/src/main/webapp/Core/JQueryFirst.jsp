@@ -47,20 +47,22 @@
 		});
 	});*/
 	//프로그램 진입점-방법3]$(function(){});
-	/*
+	
 	$(function(){
 		$('#jQuery').css("color","red").html("<strong>프로그램 진입점</strong>");
 		$("legend:eq(0)").click(function(){
 			$('#jQuery').css("color","black").html("jQuery 첫 수업입니다.");
 		});		
-	});*/
+	});
 	//프로그램 진입점-방법4] jQuery()
+	/*
 	jQuery(function(){
 		jQuery('#jQuery').css("color","red").html("<strong>프로그램 진입점</strong>");
 		jQuery("legend:eq(0)").click(function(){
 			jQuery('#jQuery').css("color","black").html("jQuery 첫 수업입니다.");
 		});
 	});
+	*/
 </script>
 
 </head>

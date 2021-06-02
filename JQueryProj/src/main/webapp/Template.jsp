@@ -18,8 +18,7 @@ $(function(){});
 </script>
 </head>
 <body>
-	<fieldset>
-		<legend>제목</legend>
-	</fieldset>
+
+
 </body>
 </html>

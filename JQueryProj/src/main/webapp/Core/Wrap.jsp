@@ -5,17 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>ToggleClass.jsp</title>
-<style>
-div {
-	width: 100px;
-	height: 100px;
-	background-color: green;
-}
-.invisible {
-	display: none;
-}
-</style>
+<title>Wrap.jsp</title>
 <!-- jQuery사용을 위한 라이브러리 임베딩-->
 <!-- 1]다운받은  .js파일 임베디드 -->
 <!--  
@@ -26,22 +16,34 @@ div {
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
 	$(function() {
-		
-		$('button').click(function(){
-			$('div').toggleClass('invisible');
-			$(this).html($(this).html()=="보이기"?"안보이기":"보이기");
+		$(':button:first').on('click',function(){
+			$('span:eq(0)').wrap('<strike>').wrap("<strong>");
+		});
+		$('button:last').on('click',function(){
+			$('a').wrap('<li>');
 		})
-		
-		
-		
 	});
 </script>
 </head>
 <body>
 	<fieldset>
-		<legend>toggleClass('클래스명')</legend>
-		<div class=invisible></div>
-		<button >안보이기</button>
+		<legend>
+			<span>wrap()함수</span>
+		</legend>
+
+		<h2>
+			<span>포탈 사이트</span>
+		</h2>
+
+		<ul>
+			<a href="http://www.naver.com/">네이버</a>
+			<a href="http://www.daum.net/">다음</a>
+			<a href="http://www.nate.com/">네이트</a>
+		</ul>
+		<hr />
+
+		<button>span태그 감싸기</button>
+		<button>a태그 감싸기</button>
 	</fieldset>
 
 </body>

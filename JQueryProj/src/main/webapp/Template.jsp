@@ -7,14 +7,16 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <!-- jQuery사용을 위한 라이브러리 임베딩-->
-<!-- 1]다운받은  .js파일 임베디드 -->
-<!--  
-<script src="<c:url value="/js/jquery-3.6.0.min.js"/>"></script>
--->
-<!-- 2]CDN(Content Deliver Network)주소 사용 -->
+<!-- 제이쿼리 UI용 CSS -->
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<!-- 제이쿼리 CORE용 라이브러리 임베드 -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- 제이쿼리 UI용 라이브러리 임베드 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <script>
-$(function(){});
+$(function(){
+	
+});
 </script>
 </head>
 <body>

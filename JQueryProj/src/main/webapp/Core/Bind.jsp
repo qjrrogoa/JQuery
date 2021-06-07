@@ -30,7 +30,6 @@
        $("div:last-child").each(function(){
     	   console.log($(this).text());
        });
-       
        //click이벤트는 워낙 빈번하게 발생함으로 함수로 구현해 놓음]
        /*
        $('button').click(function(){
@@ -63,7 +62,7 @@
        의미한다
        */
        $("div:eq(1) div").bind("click",function(){
-    	   console.log("$(this).title : ",$(this).title); //undefiend
+    	   console.log("$(this).title : ",$(this).title); //undefiend 왜냐믄 <div>가 3개 선택 됨
     	   console.log("$(this).get(0).title : ",$(this).get(0).title);
     	   console.log("this.title : ",this.title);
        switch(this.id){

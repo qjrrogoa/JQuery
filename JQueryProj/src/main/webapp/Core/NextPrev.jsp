@@ -45,8 +45,8 @@
 				$("li:last").css({color:"black",fontSize:"1em"});
 			else
 				liObj.prev().css({color:"black",fontSize:"1em"});
-			liObj.css({color:"green",fontSize:"2.2em"});
-			index++;
+				liObj.css({color:"green",fontSize:"2.2em"});
+				index++;
 			if(index != length)
 				liObj=liObj.next();
 			else{
@@ -54,7 +54,6 @@
 				liObj=$("li:first");
 			}
 		})
-
 	});
 </script>
 </head>

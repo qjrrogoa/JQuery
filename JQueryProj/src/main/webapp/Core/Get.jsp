@@ -75,7 +75,8 @@
 				<li><a href="http://www.nate.com">네이트</a></li>
 			</ul>
 			<h2>실습하기</h2>
-			<span>실습입니다</span> <input type='button' value="텍스트변경하기" />
+			<span>실습입니다</span> 
+			<input type='button' value="텍스트변경하기" />
 		</fieldset>
 	</fieldset>
 </body>

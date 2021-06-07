@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Filter.jsp</title> ​
+<title>Filter.jsp</title>
 
 <style>
 .bg {

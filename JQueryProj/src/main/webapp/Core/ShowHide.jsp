@@ -13,7 +13,7 @@
 -->
 <!-- 2]CDN(Content Deliver Network)주소 사용 -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+ <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script>
 	$(function() {
 		//페이지 최초 로드시 내용 숨기기
